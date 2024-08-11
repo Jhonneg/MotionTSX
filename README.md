@@ -1,8 +1,10 @@
-# Notion React + Typescript clone
+# Motion
+
+## React text editor
 
 **UI and Styling**
 
-![](https://skillicons.dev/icons?i=react,tailwind,typescript)
+![](https://skillicons.dev/icons?i=react,typescript)
 
 **Backend**
 
