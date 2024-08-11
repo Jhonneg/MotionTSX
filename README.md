@@ -1,6 +1,6 @@
-# Motion
+# Motion - React Text Editor
 
-## React text editor
+[Screencast from 08-11-2024 08:40:06 PM.webm](https://github.com/user-attachments/assets/52b59105-3251-4307-98b0-7db358ff62ef)
 
 **UI and Styling**
 
@@ -9,6 +9,8 @@
 **Backend**
 
 ![](https://skillicons.dev/icons?i=supabase)
+
+
 
 **Testing**
 
