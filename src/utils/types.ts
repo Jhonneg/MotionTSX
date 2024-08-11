@@ -2,13 +2,14 @@ export type NodeType =
   | "text"
   | "image"
   | "list"
+  | "page"
   | "heading1"
   | "heading2"
   | "heading3";
 
 export type NodeData = {
   id: string;
-  type: NodeData;
+  type: NodeType;
   value: string;
 };
 
