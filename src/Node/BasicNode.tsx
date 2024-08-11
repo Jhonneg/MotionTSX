@@ -28,6 +28,7 @@ export default function BasicNode({
   changeNodeValue,
 }: BasicNodeProps) {
   const nodeRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (isFocused) {
       nodeRef.current?.focus();
@@ -83,6 +84,7 @@ export default function BasicNode({
       ref={nodeRef}
       contentEditable
       suppressContentEditableWarning
+      className={styles.node}
     ></div>
   );
 }
