@@ -1,5 +1,4 @@
-
-
+import styles from "./Spacer.module.css";
 
 type SpaceProps = {
   handleClick(): void;
@@ -7,5 +6,9 @@ type SpaceProps = {
 };
 
 export default function Spacer({ handleClick, showHint }: SpaceProps) {
-  return <div>{showHint && "Click to create the first paragraph"}</div>;
+  return (
+    <div className={styles.spacer} onClick={handleClick}>
+      {showHint && "Click to create the first paragraph"}
+    </div>
+  );
 }
