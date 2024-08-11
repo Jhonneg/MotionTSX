@@ -1,11 +1,6 @@
 import "./App.css";
-import Cover from "./Page/Cover";
+import Page from "./Page/Page";
 
 export default function App() {
-  return (
-    <>
-      <Cover />
-      <p>Notion clone</p>
-    </>
-  );
+  return <Page />;
 }
