@@ -1,11 +1,9 @@
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <>
       <p>Notion clone</p>
     </>
   );
 }
-
-export default App;
