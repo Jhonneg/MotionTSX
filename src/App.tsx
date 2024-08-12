@@ -1,18 +1,14 @@
-import { nanoid } from "nanoid";
 import "./App.css";
 import Page from "./Page/Page";
 import { AppStateProvider } from "./state/AppStateContext";
+import createPage from "./utils/createPage";
 
-
-function createPage() {
-  const slug = nanoid()
-  const id = nanoid()
-}
-
+const initialState = createPage();
 
 export default function App() {
-  return;
-  <AppStateProvider>
-    <Page />;
-  </AppStateProvider>;
+  return (
+    <AppStateProvider initialState={initialState}>
+      <Page />;
+    </AppStateProvider>
+  );
 }
