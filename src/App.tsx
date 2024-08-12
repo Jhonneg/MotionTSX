@@ -8,7 +8,7 @@ const initialState = createPage();
 export default function App() {
   return (
     <AppStateProvider initialState={initialState}>
-      <Page />;
+      <Page />
     </AppStateProvider>
   );
 }
