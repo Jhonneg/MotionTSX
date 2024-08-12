@@ -28,14 +28,10 @@ export default function usePageState(initialState: Page) {
   }
 
   function setTitle(title: string) {
-    setPage((draft) => {
-      draft.title = title;
-    });
+    setPage((draft) => (draft.title = title));
   }
   function setCoverImage(coverImage: string) {
-    setPage((draft) => {
-      draft.cover = coverImage;
-    });
+    setPage((draft) => (draft.cover = coverImage));
   }
 
   return {
