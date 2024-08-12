@@ -12,7 +12,7 @@ export default function usePageState(initialState: Page) {
     setPage((draft) => draft.nodes.splice(nodeIndex, 1));
   }
 
-  function changeValueNode(nodeIndex: number, value: string) {
+  function changeNodeValue(nodeIndex: number, value: string) {
     setPage((draft) => (draft.nodes[nodeIndex].value = value));
   }
 
@@ -39,7 +39,7 @@ export default function usePageState(initialState: Page) {
     title: page.title,
     cover: page.cover,
     changeNodeType,
-    changeValueNode,
+    changeNodeValue,
     addNode,
     removeNodeByIndex,
     setTitle,
