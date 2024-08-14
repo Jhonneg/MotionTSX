@@ -5,4 +5,4 @@
 
 # Tech stack
 
-![](https://skillicons.dev/icons?i=vite,react,typescript,supabase,vitest)
+![](https://skillicons.dev/icons?i=vite,react,typescript,supabase,netlify,vitest)
