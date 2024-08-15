@@ -2,6 +2,7 @@ import { NodeData } from "../utils/types";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import NodeTypeSwitcher from "./NodeTypeSwitcher";
+import styles from "./NodeContainer.module.css";
 
 type NodeContainerProps = {
   node: NodeData;
@@ -16,7 +17,7 @@ export default function NodeContainer({
   isFocused,
   updateFocusedIndex,
 }: NodeContainerProps) {
-  const { attribustes, listeners, setNodeRef, transform, transition } =
+  const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({
       id: node.id,
     });
@@ -25,8 +26,15 @@ export default function NodeContainer({
     transition,
   };
   return (
-    <div>
-      <div>⠿</div>
+    <div
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      className={styles.container}
+    >
+      <div {...listeners} className={styles.dragHandle}>
+        ⠿
+      </div>
       <NodeTypeSwitcher
         node={node}
         index={index}
