@@ -43,6 +43,7 @@ export default function Page() {
               />
             ))}
           </SortableContext>
+          <DragOverlay />
         </DndContext>
         <Spacer
           showHint={!nodes.length}
