@@ -50,6 +50,4 @@ export default function AuthSessionProvider({
   );
 }
 
-export function useAuthSession() {
-  useContext(AuthSessionContext);
-}
+export const useAuthSession = () => useContext(AuthSessionContext);
