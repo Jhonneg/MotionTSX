@@ -4,7 +4,6 @@ import Spacer from "./Spacer";
 import { Title } from "./Title";
 import { nanoid } from "nanoid";
 import { useAppState } from "../state/AppStateContext";
-import NodeTypeSwitcher from "../Node/NodeTypeSwitcher";
 import { DndContext, DragOverlay, DragOverEvent } from "@dnd-kit/core";
 import {
   SortableContext,
@@ -13,7 +12,15 @@ import {
 import NodeContainer from "../Node/NodeContainer";
 
 export default function Page() {
-  const { title, nodes, addNode, reorderNodes, setTitle } = useAppState();
+  const {
+    title,
+    nodes,
+    addNode,
+    cover,
+    setCoverImage,
+    reorderNodes,
+    setTitle,
+  } = useAppState();
 
   const [focusedNodeIndex, setFocusedNodeIndex] = useFocusedNodeIndex({
     nodes,
@@ -28,7 +35,7 @@ export default function Page() {
 
   return (
     <>
-      <Cover />
+      <Cover filePath={cover} changePageCover={setCoverImage} />
       <div>
         <Title addNode={addNode} title={title} changePageTitle={setTitle} />
         <DndContext onDragEnd={handleDragEvent}>

@@ -2,6 +2,7 @@ import styles from "./Cover.module.css";
 import { useRef, ChangeEventHandler } from "react";
 import notesImg from "../assets/notes-3d.png";
 import FileImage from "../components/FileImage";
+import uploadImage from "../utils/uploadImage";
 
 type CoverProps = {
   filePath?: string;
@@ -15,9 +16,14 @@ export default function Cover({ filePath, changePageCover }: CoverProps) {
     fileInputRef.current?.click();
   }
 
-  const onCoverImageUpload: ChangeEventHandler<HTMLInputElement> = (event) => {
+  const onCoverImageUpload: ChangeEventHandler<HTMLInputElement> = async (
+    event
+  ) => {
     const target = event.target;
-    console.log(target?.files?.[0]);
+    const result = await uploadImage(target?.files?.[0]);
+    if (result?.filePath) {
+      changePageCover(result.filePath);
+    }
   };
 
   return (
