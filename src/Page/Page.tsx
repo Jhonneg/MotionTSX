@@ -4,7 +4,6 @@ import Spacer from "./Spacer";
 import { Title } from "./Title";
 import { nanoid } from "nanoid";
 import { useAppState } from "../state/AppStateContext";
-import NodeTypeSwitcher from "../Node/NodeTypeSwitcher";
 import { DndContext, DragOverlay, DragOverEvent } from "@dnd-kit/core";
 import {
   SortableContext,
