@@ -1,6 +1,8 @@
 # Motion - React Text Editor
 
-This project was created to emulate a simple text editor, it has basic markup, you can add list, basic text paragraphs, titles.
+This project was created to emulate a simple text editor, it has basic markup and keyboard controls. 
+
+You can add lists, basic text paragraphs, titles.
 
 It also has basic drag n drop functionality.
 
